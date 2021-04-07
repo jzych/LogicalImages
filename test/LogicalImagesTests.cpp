@@ -62,25 +62,25 @@ TEST_F(LogicalImagesTests, checkSecondConstructorExceptions)
 TEST_F(LogicalImagesTests, checkSolveAlgorithmA)
 {
     std::string path = "../test/boards/ReadMeBoardTestFile.json";
-    std::string solution = "Puzzle solved!";
+    std::string expected = "Puzzle solved!";
     auto a = std::make_shared<AlgorithmStubA>();
     testing::internal::CaptureStdout();
 
     LogicalImages li(path, a);
     li.solve();
     std::string output = testing::internal::GetCapturedStdout();
-    ASSERT_NE(output.find(solution), std::string::npos);
+    ASSERT_NE(output.find(expected), std::string::npos);
 }
 
 TEST_F(LogicalImagesTests, checkSolveFailure)
 {
     std::string path = "../test/boards/ReadMeBoardTestFile.json";
-    std::string solution = "Solution wasn't found";
+    std::string expected = "expected wasn't found";
     auto a = std::make_shared<AlgorithmStubB>();
     testing::internal::CaptureStdout();
 
     LogicalImages li(path, a);
     li.solve();
     std::string output = testing::internal::GetCapturedStdout();
-    ASSERT_NE(output.find(solution), std::string::npos);
+    ASSERT_NE(output.find(expected), std::string::npos);
 }
