@@ -22,7 +22,7 @@ TEST_F(BoardTests, checkConstructorNoexception)
 
 TEST_F(BoardTests, checkReadingJSON)
 {
-    path = "../test/ReadMeBoardTestFile.json";
+    path = "../test/boards/ReadMeBoardTestFile.json";
     JSONFileReader jfr(path);
     Board board(jfr.readRowSize(),
                 jfr.readColSize(),
@@ -35,28 +35,28 @@ TEST_F(BoardTests, checkReadingJSON)
 
 TEST_F(BoardTests, checkJSONFileReaderExceptions)
 {
-    path = "../test/JSONFileReaderWrongColSizeTestFile.json";
+    path = "../test/json/JSONFileReaderWrongColSizeTestFile.json";
     JSONFileReader jfr1(path);
     ASSERT_THROW(Board board(jfr1.readRowSize(),
                              jfr1.readColSize(),
                              jfr1.readCluesRows(),
                              jfr1.readCluesCols()), InvalidDimensions);
 
-    path = "../test/JSONFileReaderWrongRowSizeTestFile.json";
+    path = "../test/json/JSONFileReaderWrongRowSizeTestFile.json";
     JSONFileReader jfr2(path);
     ASSERT_THROW(Board board(jfr2.readRowSize(),
                              jfr2.readColSize(),
                              jfr2.readCluesRows(),
                              jfr2.readCluesCols()), InvalidDimensions);
 
-    path = "../test/JSONFileReaderNumberOfLinesAndColsNoMatch.json";
+    path = "../test/json/JSONFileReaderNumberOfLinesAndColsNoMatch.json";
     JSONFileReader jfr3(path);
     ASSERT_THROW(Board board(jfr3.readRowSize(),
                              jfr3.readColSize(),
                              jfr3.readCluesRows(),
                              jfr3.readCluesCols()), InvalidDimensions);
 
-    path = "../test/JSONFileReaderNumberOfLinesAndRowsNoMatch.json";
+    path = "../test/json/JSONFileReaderNumberOfLinesAndRowsNoMatch.json";
     JSONFileReader jfr4(path);
     ASSERT_THROW(Board board(jfr4.readRowSize(),
                              jfr4.readColSize(),
@@ -205,31 +205,31 @@ TEST_F(BoardTests, findLongestVectorLenghtOfCluesInCols)
 
 TEST_F(BoardTests, checkSecondBoardConstructorNoexception)
 {
-    path = "../test/ReadMeBoardTestFile.json";
+    path = "../test/boards/ReadMeBoardTestFile.json";
     Board board(path);
 }
 
 TEST_F(BoardTests, checkSecondBoardConstructorExceptions)
 {
-    path = "../test/ReadMeBoardTestFile.json";
+    path = "../test/boards/ReadMeBoardTestFile.json";
     Board board(path);
 
-    path = "../test/JSONFileReaderWrongColSizeTestFile.json";
+    path = "../test/json/JSONFileReaderWrongColSizeTestFile.json";
     ASSERT_THROW(Board board(path), InvalidDimensions);
 
-    path = "../test/JSONFileReaderWrongRowSizeTestFile.json";
+    path = "../test/json/JSONFileReaderWrongRowSizeTestFile.json";
     ASSERT_THROW(Board board(path), InvalidDimensions);
 
-    path = "../test/JSONFileReaderNumberOfLinesAndColsNoMatch.json";
+    path = "../test/json/JSONFileReaderNumberOfLinesAndColsNoMatch.json";
     ASSERT_THROW(Board board(path), InvalidDimensions);
 
-    path = "../test/JSONFileReaderNumberOfLinesAndRowsNoMatch.json";
+    path = "../test/json/JSONFileReaderNumberOfLinesAndRowsNoMatch.json";
     ASSERT_THROW(Board board(path), InvalidDimensions);
 }
 
 TEST_F(BoardTests, checkSecondBoardConstructorSize)
 {
-    path = "../test/ReadMeBoardTestFile.json";
+    path = "../test/boards/ReadMeBoardTestFile.json";
     Board board(path);
     ASSERT_EQ(board.getSizeCols(), 3);
     ASSERT_EQ(board.getSizeRows(), 3);

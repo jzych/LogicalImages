@@ -1,7 +1,7 @@
 # LogicalImages
-[![Build Status](https://www.travis-ci.org/LordLukin/LogicalImages.svg?branch=master)](https://www.travis-ci.org/LordLukin/LogicalImages) 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a43fc0aad42c42c19499964f519d2e0e)](https://app.codacy.com/app/LordLukin/LogicalImages?utm_source=github.com&utm_medium=referral&utm_content=LordLukin/LogicalImages&utm_campaign=Badge_Grade_Settings) 
-[![codecov](https://codecov.io/gh/LordLukin/LogicalImages/branch/master/graph/badge.svg)](https://codecov.io/gh/LordLukin/LogicalImages)
+[![Build Status](https://www.travis-ci.com/jzych/LogicalImages.svg?branch=master)](https://www.travis-ci.com/jzych/LogicalImages)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b0f9731493584d6880adfa723bf5e5d6)](https://www.codacy.com/gh/jzych/LogicalImages/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jzych/LogicalImages&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/jzych/LogicalImages/branch/master/graph/badge.svg?token=W2LJUIO7CE)](https://codecov.io/gh/jzych/LogicalImages)
 
 ## Program LogicalImagesSolver
 ===================

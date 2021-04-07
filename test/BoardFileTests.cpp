@@ -8,7 +8,7 @@ struct BoardFileTests : public ::testing::Test
 
 TEST_F(BoardFileTests, whenFileToReadPathIsGiven)
 {
-    std::string path = "../test/EmptyFile.txt";
+    std::string path = "../test/json/EmptyFile.txt";
 
     ASSERT_NO_THROW(openFileToRead(path));
 }
@@ -29,7 +29,7 @@ TEST_F(BoardFileTests, whenWrongPathIsGiven)
 
 TEST_F(BoardFileTests, whenFileToWritePathIsGiven)
 {
-    std::string path = "../test/EmptyFile.txt";
+    std::string path = "../test/json/EmptyFile.txt";
 
     ASSERT_NO_THROW(openFileToWrite(path));
 }

@@ -5,18 +5,19 @@ coverage:
 
     status:
         project:
-            default:
-                enabled: yes
+            patch: off
+            default: false
+            app:
+                paths:
+                    - "!test/"
                 target: auto
-
-                threshhold: 1%
-                if_not_found: success
+                threshold: 1%
                 if_ci_failed: error
-            patch:
-                default:
-                    enabled: no
-
+            tests:
+                paths: 
+                    - "test/"
+                target: 100%
+                if_ci_failed: error
 
 ignore:
     - "json/*"
-    - "test/*"
