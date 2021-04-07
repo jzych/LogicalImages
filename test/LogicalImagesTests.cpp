@@ -22,10 +22,12 @@ TEST_F(LogicalImagesTests, checkFirstConstructorNoexception)
 {
     std::string path = "../test/boards/ReadMeBoardTestFile.json";
     JSONFileReader jfr(path);
-    auto b = std::make_shared<Board>(jfr.readRowSize(),
-                                     jfr.readColSize(),
-                                     jfr.readCluesRows(),
-                                     jfr.readCluesCols());
+    auto b = std::make_shared<Board>(
+        jfr.readRowSize(),
+        jfr.readColSize(),
+        jfr.readCluesRows(),
+        jfr.readCluesCols());
+        
     auto a = std::make_shared<AlgorithmStubA>();
 
     LogicalImages li(b, a);
