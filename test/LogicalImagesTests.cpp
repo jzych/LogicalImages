@@ -75,7 +75,7 @@ TEST_F(LogicalImagesTests, checkSolveAlgorithmA)
 TEST_F(LogicalImagesTests, checkSolveFailure)
 {
     std::string path = "../test/boards/ReadMeBoardTestFile.json";
-    std::string expected = "expected wasn't found";
+    std::string expected = "Solution wasn't found";
     auto a = std::make_shared<AlgorithmStubB>();
     testing::internal::CaptureStdout();
 
